@@ -1,0 +1,120 @@
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+body { 
+    background-color: #121212; 
+    color: #f5f5f5; 
+    line-height: 1.6; 
+}
+header { 
+    text-align: center; 
+    padding: 3rem 1rem; 
+    background: linear-gradient(135deg, #1f1f1f, #2c2c2c); 
+    border-bottom: 3px solid #d4af37; 
+}
+h1 { 
+    color: #d4af37; 
+    font-size: 2.5rem; 
+    margin-bottom: 0.5rem; 
+    letter-spacing: 1px;
+}
+.container { 
+    max-width: 1100px; 
+    margin: 2rem auto; 
+    padding: 0 1rem; 
+    display: grid; 
+    grid-template-columns: 1fr 2fr; 
+    gap: 2rem; 
+}
+.form-section, .gallery-section { 
+    background-color: #1e1e1e; 
+    padding: 2rem; 
+    border-radius: 10px; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.6); 
+}
+h2 { 
+    color: #d4af37; 
+    margin-bottom: 1.5rem; 
+    border-bottom: 1px solid #333; 
+    padding-bottom: 0.5rem; 
+}
+.input-group { 
+    margin-bottom: 1.5rem; 
+}
+label { 
+    display: block; 
+    margin-bottom: 0.5rem; 
+    font-weight: 600; 
+    color: #bbb; 
+    font-size: 0.95rem;
+}
+input, select { 
+    width: 100%; 
+    padding: 0.8rem; 
+    border-radius: 5px; 
+    border: 1px solid #444; 
+    background-color: #2a2a2a; 
+    color: white; 
+    outline: none; 
+    transition: border-color 0.3s;
+}
+input:focus, select:focus { 
+    border-color: #d4af37; 
+}
+button { 
+    width: 100%; 
+    padding: 1rem; 
+    background-color: #d4af37; 
+    color: #121212; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 1.1rem; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background 0.3s ease; 
+}
+button:hover { 
+    background-color: #f3c746; 
+}
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 1.5rem; 
+}
+.coin-card { 
+    background-color: #2a2a2a; 
+    border-radius: 8px; 
+    padding: 1rem; 
+    text-align: center; 
+    border: 1px solid #444; 
+    transition: transform 0.3s ease, border-color 0.3s ease; 
+}
+.coin-card:hover { 
+    transform: translateY(-5px); 
+    border-color: #d4af37; 
+}
+.coin-name { 
+    font-weight: bold; 
+    font-size: 1.1rem; 
+    margin-bottom: 0.5rem; 
+    color: #fff; 
+}
+.coin-details { 
+    font-size: 0.85rem; 
+    color: #aaa; 
+    margin-bottom: 0.8rem; 
+}
+.coin-value { 
+    font-weight: bold; 
+    color: #4caf50; 
+    font-size: 1.25rem; 
+    background: #1a1a1a;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+@media (max-width: 850px) { 
+    .container { grid-template-columns: 1fr; } 
+}

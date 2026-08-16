@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Vault | Global Coin Catalog</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Prime Vault</h1>
+        <p>Global Coin Leaderboard & Tracker</p>
+    </header>
+
+    <main class="container">
+        <!-- LOGIN SECTION -->
+        <section id="auth-section" class="form-section">
+            <h2>Secure Login</h2>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username (For new accounts)">
+            </div>
+            <div class="input-group">
+                <input type="email" id="email" placeholder="Email Address" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button id="login-btn">Login / Register</button>
+            <p id="auth-message" style="color: #ff4c4c; margin-top: 10px;"></p>
+        </section>
+
+        <!-- MAIN APP SECTION -->
+        <section id="app-section" style="display: none; width: 100%;">
+            <div class="user-banner" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                <h2 id="section-title">Global Collection</h2>
+                <button id="logout-btn" style="background: #ff4c4c; color: #fff; border: none; padding: 8px 15px; border-radius: 5px; cursor: pointer;">Logout</button>
+            </div>
+
+            <!-- SEARCH USER VAULT BAR -->
+            <div class="search-bar-container" style="background: #1e1e1e; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+                <input type="text" id="search-username" placeholder="Search other user's vault (e.g. primepranesh11)..." style="flex: 1; padding: 10px; border-radius: 5px; border: 1px solid #444; background: #222; color: #fff; min-width: 200px;">
+                <button id="search-btn" style="padding: 10px 20px; background: #d4af37; color: #000; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Search Vault</button>
+                <button id="reset-search-btn" style="padding: 10px 20px; background: #444; color: #fff; border: none; border-radius: 5px; cursor: pointer;">Show Global</button>
+            </div>
+
+            <!-- ADD COIN FORM -->
+            <section class="form-section" style="margin-bottom: 30px;">
+                <h3>Add New Coin to Your Vault</h3>
+                <div class="input-group">
+                    <input type="text" id="coin-name" placeholder="Coin Name / Country (e.g. 5 Rupees India)">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="coin-year" placeholder="Mint Year & Condition (e.g. 1999 good)">
+                </div>
+                <div class="input-group">
+                    <input type="text" id="coin-price" placeholder="Estimated Price (e.g. ₹135.75)">
+                </div>
+                <div class="input-group">
+                    <input type="file" id="coin-image" accept="image/*" style="color: #fff;">
+                </div>
+                <button id="add-coin-btn">Upload & Catalog Coin</button>
+            </section>
+
+            <!-- COINS DISPLAY CONTAINER -->
+            <div id="coins-container" class="coins-grid"></div>
+        </section>
+    </main>
+
+    <!-- Firebase SDK Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore-compat.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
